@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-lit-review"
+version = "0.1.0"
+description = "Reconstructed multi-agent literature review and learning path recommender."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+[project.optional-dependencies]
+langgraph = [
+    "langgraph>=0.2.60",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+agentic-lit-review = "agentic_lit_review.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

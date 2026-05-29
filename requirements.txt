@@ -1,0 +1,6 @@
+# Minimal runtime has no third-party dependencies.
+#
+# The project can run in heuristic mode with:
+#   py -3 main.py "zero-shot learning" --no-llm
+#
+# Optional LangGraph support is listed in requirements-langgraph.txt.
