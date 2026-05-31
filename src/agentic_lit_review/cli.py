@@ -4,8 +4,10 @@ import argparse
 import json
 from pathlib import Path
 
+from agentic_lit_review.evaluation import evaluate_state, print_evaluation
 from agentic_lit_review.graph import LiteratureReviewPipeline
 from agentic_lit_review.llm import LLMClient, load_env
+from agentic_lit_review.retrievers import SampleRetriever
 from agentic_lit_review.state import AgentState
 
 
@@ -18,23 +20,33 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--min-papers", type=int, default=3, help="Minimum screened papers before synthesis.")
     parser.add_argument("--max-search-iterations", type=int, default=2)
     parser.add_argument("--no-llm", action="store_true", help="Use deterministic heuristic agents only.")
+    parser.add_argument("--demo-data", action="store_true", help="Use built-in sample papers instead of live APIs.")
+    parser.add_argument("--evaluate", action="store_true", help="Print lightweight pipeline metrics.")
     parser.add_argument("--json", type=Path, help="Write final state to a JSON file.")
     args = parser.parse_args(argv)
 
     load_env()
     llm = LLMClient(enabled=not args.no_llm)
+    retrievers = [SampleRetriever()] if args.demo_data else None
     pipeline = LiteratureReviewPipeline(
         llm=llm,
+        retrievers=retrievers,
         max_results_per_query=args.max_results,
         min_screened_papers=args.min_papers,
         max_search_iterations=args.max_search_iterations,
+        request_pause_seconds=0.0 if args.demo_data else 1.0,
     )
     state = pipeline.run(args.topic)
     print_report(state, llm_enabled=llm.enabled)
+    metrics = evaluate_state(state)
+
+    if args.evaluate:
+        print_evaluation(metrics)
 
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)
-        args.json.write_text(json.dumps(_jsonable(state), indent=2), encoding="utf-8")
+        payload = {"state": _jsonable(state), "evaluation": metrics}
+        args.json.write_text(json.dumps(payload, indent=2), encoding="utf-8")
         print(f"\nSaved JSON output to {args.json}")
     return 0
 

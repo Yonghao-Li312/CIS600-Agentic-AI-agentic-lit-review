@@ -1,0 +1,227 @@
+{
+  "state": {
+    "research_topic": "zero-shot learning",
+    "search_queries": [
+      "zero-shot learning",
+      "zero-shot learning survey",
+      "zero-shot learning recent methods"
+    ],
+    "raw_papers": [
+      {
+        "title": "A Survey of Zero-Shot Learning: Settings, Methods, and Applications",
+        "abstract": "Zero-shot learning studies recognition of unseen classes by transferring knowledge from seen classes through semantic attributes, language embeddings, or auxiliary descriptions. Survey papers organize the problem settings, datasets, evaluation protocols, and common model families.",
+        "source": "Sample",
+        "url": "https://example.com/zero-shot-survey",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2018,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 1.0,
+        "summary": "Zero-shot learning studies recognition of unseen classes by transferring knowledge from seen classes through semantic attributes, language embeddings, or auxiliary descriptions."
+      },
+      {
+        "title": "Semantic Embedding Approaches for Zero-Shot Image Classification",
+        "abstract": "This paper introduces semantic embedding models that align image features with class descriptions. The approach provides a foundation for recognizing unseen categories without labeled examples.",
+        "source": "Sample",
+        "url": "https://example.com/semantic-embedding",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2016,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.57,
+        "summary": "This paper introduces semantic embedding models that align image features with class descriptions."
+      },
+      {
+        "title": "Generalized Zero-Shot Learning with Calibrated Stacking",
+        "abstract": "Generalized zero-shot learning evaluates models on both seen and unseen classes. Calibration methods reduce the bias toward seen classes and improve balanced recognition performance.",
+        "source": "Sample",
+        "url": "https://example.com/generalized-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2019,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 1.0,
+        "summary": "Generalized zero-shot learning evaluates models on both seen and unseen classes."
+      },
+      {
+        "title": "Prompt-Based Vision-Language Models for Zero-Shot Recognition",
+        "abstract": "Large vision-language models enable zero-shot recognition by comparing images with natural language prompts. Prompt engineering and representation alignment are central to recent progress.",
+        "source": "Sample",
+        "url": "https://example.com/prompt-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2022,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.7,
+        "summary": "Large vision-language models enable zero-shot recognition by comparing images with natural language prompts."
+      },
+      {
+        "title": "Benchmarking Robustness in Zero-Shot Learning Systems",
+        "abstract": "Robust zero-shot systems must handle distribution shift, ambiguous class descriptions, and dataset bias. Benchmark design is important for evaluating real-world transfer performance.",
+        "source": "Sample",
+        "url": "https://example.com/robust-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2024,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.93,
+        "summary": "Robust zero-shot systems must handle distribution shift, ambiguous class descriptions, and dataset bias."
+      }
+    ],
+    "screened_papers": [
+      {
+        "title": "A Survey of Zero-Shot Learning: Settings, Methods, and Applications",
+        "abstract": "Zero-shot learning studies recognition of unseen classes by transferring knowledge from seen classes through semantic attributes, language embeddings, or auxiliary descriptions. Survey papers organize the problem settings, datasets, evaluation protocols, and common model families.",
+        "source": "Sample",
+        "url": "https://example.com/zero-shot-survey",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2018,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 1.0,
+        "summary": "Zero-shot learning studies recognition of unseen classes by transferring knowledge from seen classes through semantic attributes, language embeddings, or auxiliary descriptions."
+      },
+      {
+        "title": "Generalized Zero-Shot Learning with Calibrated Stacking",
+        "abstract": "Generalized zero-shot learning evaluates models on both seen and unseen classes. Calibration methods reduce the bias toward seen classes and improve balanced recognition performance.",
+        "source": "Sample",
+        "url": "https://example.com/generalized-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2019,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 1.0,
+        "summary": "Generalized zero-shot learning evaluates models on both seen and unseen classes."
+      },
+      {
+        "title": "Benchmarking Robustness in Zero-Shot Learning Systems",
+        "abstract": "Robust zero-shot systems must handle distribution shift, ambiguous class descriptions, and dataset bias. Benchmark design is important for evaluating real-world transfer performance.",
+        "source": "Sample",
+        "url": "https://example.com/robust-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2024,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.93,
+        "summary": "Robust zero-shot systems must handle distribution shift, ambiguous class descriptions, and dataset bias."
+      },
+      {
+        "title": "Prompt-Based Vision-Language Models for Zero-Shot Recognition",
+        "abstract": "Large vision-language models enable zero-shot recognition by comparing images with natural language prompts. Prompt engineering and representation alignment are central to recent progress.",
+        "source": "Sample",
+        "url": "https://example.com/prompt-zsl",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2022,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.7,
+        "summary": "Large vision-language models enable zero-shot recognition by comparing images with natural language prompts."
+      },
+      {
+        "title": "Semantic Embedding Approaches for Zero-Shot Image Classification",
+        "abstract": "This paper introduces semantic embedding models that align image features with class descriptions. The approach provides a foundation for recognizing unseen categories without labeled examples.",
+        "source": "Sample",
+        "url": "https://example.com/semantic-embedding",
+        "authors": [
+          "Sample Author"
+        ],
+        "year": 2016,
+        "venue": "",
+        "paper_id": "",
+        "relevance": 0.57,
+        "summary": "This paper introduces semantic embedding models that align image features with class descriptions."
+      }
+    ],
+    "themes": [
+      "Connections around zero-shot, learning, recognition",
+      "Connections around classes, models, unseen",
+      "Connections around seen, semantic"
+    ],
+    "research_gaps": [
+      "Need human validation of relevance and reading-order quality for zero-shot learning.",
+      "Need full-text analysis beyond abstracts to improve synthesis depth.",
+      "Need stronger coverage checks across venues, years, and related terminology."
+    ],
+    "research_plan": [
+      "Map core definitions and subproblems in zero-shot learning.",
+      "Compare foundational methods, datasets, and evaluation criteria.",
+      "Identify recent extensions and unresolved limitations.",
+      "Validate the proposed reading order with domain experts or course staff."
+    ],
+    "reading_order": [
+      {
+        "title": "A Survey of Zero-Shot Learning: Settings, Methods, and Applications",
+        "reason": "Start here because it appears broad, foundational, or highly relevant.",
+        "url": "https://example.com/zero-shot-survey"
+      },
+      {
+        "title": "Semantic Embedding Approaches for Zero-Shot Image Classification",
+        "reason": "Read early to understand older foundations before recent extensions.",
+        "url": "https://example.com/semantic-embedding"
+      },
+      {
+        "title": "Generalized Zero-Shot Learning with Calibrated Stacking",
+        "reason": "Read after the foundation to build toward newer methods and applications.",
+        "url": "https://example.com/generalized-zsl"
+      },
+      {
+        "title": "Prompt-Based Vision-Language Models for Zero-Shot Recognition",
+        "reason": "Read after the foundation to build toward newer methods and applications.",
+        "url": "https://example.com/prompt-zsl"
+      },
+      {
+        "title": "Benchmarking Robustness in Zero-Shot Learning Systems",
+        "reason": "Read after the foundation to build toward newer methods and applications.",
+        "url": "https://example.com/robust-zsl"
+      }
+    ],
+    "search_iterations": 1,
+    "errors": []
+  },
+  "evaluation": {
+    "pipeline_completion": {
+      "search": true,
+      "screening": true,
+      "synthesis": true,
+      "planning": true
+    },
+    "retrieval": {
+      "raw_papers": 5,
+      "screened_papers": 5,
+      "retention_rate": 1.0,
+      "source_counts": {
+        "Sample": 5
+      },
+      "source_diversity": 1
+    },
+    "screening": {
+      "mean_relevance": 0.84,
+      "max_relevance": 1.0,
+      "high_relevance_count": 3
+    },
+    "outputs": {
+      "theme_count": 3,
+      "gap_count": 3,
+      "plan_step_count": 4,
+      "reading_order_count": 5
+    }
+  }
+}

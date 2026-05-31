@@ -4,6 +4,7 @@ import unittest
 
 from agentic_lit_review.agents.planning import PlanningAgent
 from agentic_lit_review.agents.screening import ScreeningAgent
+from agentic_lit_review.evaluation import evaluate_state
 from agentic_lit_review.llm import LLMClient
 from agentic_lit_review.models import Paper
 from agentic_lit_review.retrievers.dedupe import dedupe_papers
@@ -46,6 +47,28 @@ class ReconstructionTests(unittest.TestCase):
         result = agent(state)
 
         self.assertEqual(result["reading_order"][0]["title"], "Zero-shot learning survey")
+
+    def test_evaluation_reports_pipeline_completion(self) -> None:
+        paper = Paper(
+            title="Zero-shot learning survey",
+            abstract="Zero-shot learning survey.",
+            source="Sample",
+            relevance=0.9,
+        )
+        state = {
+            "research_topic": "zero-shot learning",
+            "raw_papers": [paper],
+            "screened_papers": [paper],
+            "themes": ["Foundational methods"],
+            "research_gaps": ["Human evaluation"],
+            "research_plan": ["Compare methods"],
+            "reading_order": [{"title": paper.title, "reason": "Start broad"}],
+        }
+
+        metrics = evaluate_state(state)
+
+        self.assertTrue(metrics["pipeline_completion"]["planning"])
+        self.assertEqual(metrics["retrieval"]["source_diversity"], 1)
 
 
 if __name__ == "__main__":

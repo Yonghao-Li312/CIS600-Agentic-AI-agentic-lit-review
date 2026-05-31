@@ -9,14 +9,21 @@ class LiteratureReviewPipeline:
     def __init__(
         self,
         llm: LLMClient | None = None,
+        retrievers: list[object] | None = None,
         max_results_per_query: int = 5,
         min_screened_papers: int = 3,
         max_search_iterations: int = 2,
+        request_pause_seconds: float = 1.0,
     ) -> None:
         self.llm = llm or LLMClient()
         self.min_screened_papers = min_screened_papers
         self.max_search_iterations = max_search_iterations
-        self.search = SearchAgent(self.llm, max_results_per_query=max_results_per_query)
+        self.search = SearchAgent(
+            self.llm,
+            retrievers=retrievers,
+            max_results_per_query=max_results_per_query,
+            request_pause_seconds=request_pause_seconds,
+        )
         self.screening = ScreeningAgent(self.llm)
         self.synthesis = SynthesisAgent(self.llm)
         self.planning = PlanningAgent(self.llm)
